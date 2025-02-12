@@ -4,7 +4,9 @@
 Total Num of Transaction- SELECT COUNT(TransactionID) AS Total_Num_Transactions FROM assessment_dataset
 
 Total Amount- SELECT SUM(TransactionAmount) AS TotalTransactionAmount FROM assessment_dataset
+
 Average Amount- SELECT AVG(TransactionAmount) AS AverageTransactionAmount FROM assessment_dataset
+
 Min & Max- SELECT MAX(TransactionAmount) AS MaxTransactionAmount, MIN(TransactionAmount) AS MinTransactionAmount FROM assessment_dataset
 
 3) Analyzing Customers
