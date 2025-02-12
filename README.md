@@ -10,7 +10,7 @@ Average Amount- SELECT AVG(TransactionAmount) AS AverageTransactionAmount FROM a
 
 Min & Max- SELECT MAX(TransactionAmount) AS MaxTransactionAmount, MIN(TransactionAmount) AS MinTransactionAmount FROM assessment_dataset
 
-3) Analyzing Customers
+2) Analyzing Customers
    
 Unique Customers- SELECT COUNT(DISTINCT CustomerID) AS UniqueCustomers FROM assessment_dataset WHERE CustomerID IS NOT NULL
 
@@ -20,7 +20,7 @@ Gender Distribution- SELECT CustomerGender, COUNT(*) AS Count FROM assessment_da
 
 Top 5 city with highest no. of Transcations- SELECT City, COUNT(*) AS assessment_dataset FROM transactions GROUP BY City ORDER BY TransactionCount DESC LIMIT 5
 
-5) Product and Store Analysis
+3) Product and Store Analysis
    
 Top 10 Products- SELECT ProductName, COUNT(*) AS Count FROM assessment_dataset GROUP BY ProductName ORDER BY COunt DESC LIMIT 10
 
@@ -29,13 +29,13 @@ Total QUantity by product- SELECT ProductName, SUM(Quantity) AS TotalQuantity FR
 Online VS InStore- SELECT StoreType, COUNT(*) AS Count FROM assessment_dataset GROUP BY StoreType
 Revenue by store type- SELECT StoreType, SUM(TransactionAmount) AS TotalRevenue FROM assessment_dataset GROUP BY StoreType
 
-7) Discounts/ Loyalty
+4) Discounts/ Loyalty
    
 Average Discount- SELECT AVG(DiscountPercent) AS AverageDiscountPercent FROM assessment_dataset
 
 Total Loyalty Points- SELECT SUM(LoyaltyPoints) AS TotalLoyaltyPoints FROM assessment_dataset
 
-9) Delivery & Returns
+5) Delivery & Returns
     
 Average Delivery- SELECT AVG(DeliveryTimeDays) AS AverageDeliveryTime FROM assessment_dataset
 
